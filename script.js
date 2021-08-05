@@ -96,7 +96,8 @@ function restartGame() {
     score.innerHTML = `
     <p>Player: ${scoreBoard.player}</p>
     <p>Computer: ${scoreBoard.computer}</p>
-    `;
+`;
+    restart.style.display = "none";
 }
 
 //ClearModal
@@ -112,5 +113,5 @@ function clearModal(event) {
 choices.forEach(item => {
 return     item.addEventListener('click', play )
 })
-
+restart.addEventListener('click', restartGame )
 window.addEventListener("click", clearModal )
